@@ -9,7 +9,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'hard to guess string'
 
-from flask_bootstrap import Bootstrap5
+from flask_bootstrap5 import Bootstrap5
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
