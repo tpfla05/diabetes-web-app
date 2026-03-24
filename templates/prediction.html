@@ -1,11 +1,25 @@
 {% extends "base.html" %}
-{% import "bootstrap5/form.html" as wtf %}
 
 {% block content %}
 <div class="container">
     <div class="page-header">
         <h1>Fill in the data</h1>
-        {{ wtf.render_form(form) }}
+
+        <form method="POST">
+            {{ form.hidden_tag() }}
+
+            {{ form.preg.label }} {{ form.preg() }}<br>
+            {{ form.glucose.label }} {{ form.glucose() }}<br>
+            {{ form.blood.label }} {{ form.blood() }}<br>
+            {{ form.skin.label }} {{ form.skin() }}<br>
+            {{ form.insulin.label }} {{ form.insulin() }}<br>
+            {{ form.bmi.label }} {{ form.bmi() }}<br>
+            {{ form.dpf.label }} {{ form.dpf() }}<br>
+            {{ form.age.label }} {{ form.age() }}<br>
+
+            {{ form.submit() }}
+        </form>
+
     </div>
 </div>
 {% endblock %}
