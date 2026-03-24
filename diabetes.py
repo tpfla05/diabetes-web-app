@@ -66,14 +66,17 @@ def lab():
         X_test = scaler.transform(X_test)
 
         # 모델 로드
-        from tensorflow import keras
-        model = keras.models.load_model('pima_model.keras')
+        #from tensorflow import keras
+        #model = keras.models.load_model('pima_model.keras')
 
         # evaluate model
-        prediction = model.predict(X_test)
-        res = prediction[0][0]
-        res = np.round(res, 2)
-        res = float(np.round(res * 100))
+       # prediction = model.predict(X_test)
+      #  res = prediction[0][0]
+      #  res = np.round(res, 2)
+      #  res = float(np.round(res * 100))
+        
+        # 임시 예측값 (Render용)
+        res = 50
 
         return render_template('result.html', res=res)
 
